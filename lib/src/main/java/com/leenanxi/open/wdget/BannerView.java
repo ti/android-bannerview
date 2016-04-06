@@ -45,6 +45,11 @@ public class BannerView extends RelativeLayout {
 
     private List<View> mIndicatorViews = null;
 
+    @Override
+    protected void onDetachedFromWindow() {
+        stopLoop();
+        super.onDetachedFromWindow();
+    }
 
     private BannerViewAdapter mBannerAdapter = null;
 
