@@ -353,7 +353,7 @@ public class BannerView extends RelativeLayout {
 
         private View getView(int position, ViewGroup container) {
             ImageView imageView = new ImageView(container.getContext());
-            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
             if (mBannerItems != null && !mBannerItems.isEmpty()) {
                 if (mImageLoader != null) {
                     mImageLoader.loadImage(imageView, mBannerItems.get(position).getUrl());
